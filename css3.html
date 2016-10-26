@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.box{
+				width: 200px;
+				height: 200px;
+				position: relative;
+				cursor: pointer;
+				/*border: 1px solid red;*/
+			}
+			.d2{
+				position: absolute;
+				top: 100px;
+				left: 50px;
+				height: 0px;
+				width: 100px;
+				border-right: 1px solid #666;
+				border-left: 1px solid #666;
+				transition: all 2s;
+				-webkit-transition: all 2s;
+				-moz-transition: all 2s;
+				-ms-transition: all 2s;
+			}
+			.d1{
+				position: absolute;
+				top: 50px;
+				left: 100px;
+				height: 100px;
+				width: 0px;
+				border-top: 1px solid #666;
+				border-bottom: 1px solid #666;
+				transition: all 2s;
+				-webkit-transition: all 2s;
+				-moz-transition: all 2s;
+				-ms-transition: all 2s;
+			}
+			.box:hover .d1{
+				width: 10px;
+				transform:translateX(-5px) scaleX(20);
+				-webkit-transform: translateX(-5px) scaleX(20);
+				-moz-transform: translateX(-5px) scaleX(20);
+				-ms-transform: translateX(-5px) scaleX(20);
+			}
+			.box:hover .d2{
+				height: 10px;
+				transform:translateY(-5px) scaleY(20) ;
+			}
+			.box img{
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				width: 200px;
+				height: 200px;
+				transition: all 2s;
+				-webkit-transition: all 2s;
+				-moz-transition: all 2s;
+				-ms-transition: all 2s;
+			}
+			.box:hover img{
+				left: -10px;	
+			}
+			.border{
+				position: absolute;
+				width: 200px;
+				height: 200px;
+				line-height: 160px;
+				text-align: center;
+				opacity: 0;
+				-moz-opacity: 0;
+				/*filter:alpha(opacity=0) ;*/
+				color: #fff;
+				font-size:20px ;
+				background-color: rgba(0,0,0,0);
+				transition: all 2s;
+				-webkit-transition: all 2s;
+				-moz-transition: all 2s;
+				-ms-transition: all 2s;
+			}
+			.box:hover .border{
+				background-color: rgba(0,0,0,0.3);
+				opacity: 1;
+				-moz-opacity: 1;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<img src="img/1.jpg"/>
+			<div class="border">
+				<p>敬请期待</p>
+			</div>
+			<div class="d1"></div>
+			<div class="d2"></div>
+		</div>
+	</body>
+</html>
